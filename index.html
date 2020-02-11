@@ -20,7 +20,6 @@ console.log(loadimg);
 <script type="text/javascript">
 var wimg = 950;
 var himg = 1900;
-if (loadimg == "damage-hitbox") { wimg = 950; himg = 880; }
 var catitems = ["uts-15", "dbv-12", "saiga-12k", "m1014", "hawk-12g", "870-mcs", "dao-12", "qbs-09", "spas-12"];  
 var nodata = ["usas-12", "m26-slug", "c4-explosive", "m18-claymore", "m32-mgl", "m15-at-mine", "m2-slam", "ucav", "xm25-smoke", "m224-mortar", "m18-smoke", "m320-fb", "m26-frag", "m26-mass", "aa-mine"]; // to bblog
    if (catitems.indexOf(loadimg) > -1) {
@@ -30,7 +29,7 @@ var nodata = ["usas-12", "m26-slug", "c4-explosive", "m18-claymore", "m32-mgl", 
 		wimg = 800;
 		himg = 600;
    }
-
+if (loadimg == "damage-hitbox") { wimg = 950; himg = 880; }
 var loadhtml = "<center><br><br>Welcome to BBLog plugins!<br><a href='https://github.com/irussao/BBLogPlugins' target='_blank'>https://github.com/irussao/BBLogPlugins</a></center>";
 if (loadimg != null) {	
 loadhtml = `
