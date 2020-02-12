@@ -22,12 +22,13 @@ var wimg = 950;
 var himg = 1900;
 var catitems = ["uts-15", "dbv-12", "saiga-12k", "m1014", "hawk-12g", "870-mcs", "dao-12", "qbs-09", "spas-12"];  
 var nodata = ["usas-12", "m26-slug", "c4-explosive", "m18-claymore", "m32-mgl", "m15-at-mine", "m2-slam", "ucav", "xm25-smoke", "m224-mortar", "m18-smoke", "m320-fb", "m26-frag", "m26-mass", "aa-mine"]; // to bblog
-   if (catitems.indexOf(loadimg) > -1) {
+   if (catitems.indexOf(loadimg) < 0) {
 		wimg = 950;
 		himg = 1900;
    } else {
-		wimg = 800;
-		himg = 600;
+		wimg = 962;
+		himg = 393;
+		shells = '<br><br><img src="https://jnjsh7rkprx40kalmasbdq-on.drv.tw/sym/images/shells.png">';
    }
 if (loadimg == "damage-hitbox") { wimg = 950; himg = 880; }
 var loadhtml = "<center><br><br>Welcome to BBLog plugins!<br><a href='https://github.com/irussao/BBLogPlugins' target='_blank'>https://github.com/irussao/BBLogPlugins</a></center>";
