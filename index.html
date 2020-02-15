@@ -2,14 +2,27 @@
 <html>
 <head>
 <!-- <meta http-equiv="Cache-Control" content="max-age=604800" /> -->
+<meta charset="utf-8">
 <script type="text/javascript">
 var url_string = window.location.href;
 var url = new URL(url_string);
 var loadimg = url.searchParams.get("weapon");
+var bblog = url.searchParams.get("bblog");
 </script>
+<style>
+a {
+	text-decoration: none;
+}
+a:visited,a:active {   
+    color: #FFFFFF;
+}
+a:hover {
+	color: #efff1f;
+}
+</style>
 <title></title>
 </head>
-<body style="margin: 0px;">
+<body style="margin: 0px;" bgcolor="#070707" text="#ADFF2E">
 <center>
 <div id="weaponscont">
 <BR><BR><BR>
@@ -33,13 +46,21 @@ if (loadimg == "damage-hitbox") { wimg = 950; himg = 880; }
 var phandata = "";
 if (loadimg == "phantom") { wimg = 850; himg = 476; phandata = '<br><br><img src="https://irussao.github.io/images/phantom1-2.png">'; }
 if (loadimg == "usas-12" || loadimg == "shorty-12g") { wimg = 950; himg = 135; }
-var loadhtml = "<center><br><br>Welcome to BBLog plugins!<br><a href='https://github.com/irussao/BBLogPlugins' target='_blank'>https://github.com/irussao/BBLogPlugins</a></center>";
-if (loadimg != null) {	
-loadhtml = `
+var loadhtml = `<center><br><br>Welcome to BBLog plugins!<br><a href='https://github.com/irussao/BBLogPlugins' target='_blank'>https://github.com/irussao/BBLogPlugins</a>
+<br><br>
+ <form action="/index.html">
+  <label for="fname">Weapon slug name:</label> <input type="text" id="weapon" name="weapon" value="" size="10"> <input type="submit" value="Submit">
+</form> 
+</center>
+`;
+var loadhtmlbblog = "";
+if (loadimg != null && loadimg != "") {	
+loadhtmlbblog = `
 <center><img src="https://irussao.github.io/images/`+loadimg+`.png" width="`+wimg+`" height="`+himg+`" alt="">`+shells+phandata+`</center>
 `;
 }
-document.getElementById("weaponscont").innerHTML = loadhtml;
+loadimg = loadimg || "";
+if (bblog == 1) { document.getElementById("weaponscont").innerHTML = loadhtmlbblog; } else { document.getElementById("weaponscont").innerHTML = loadhtml + "<hr><h3>" + loadimg + "</h3> " +loadhtmlbblog; }
 </script>
 </body>
 </html>
