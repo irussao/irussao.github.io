@@ -33,7 +33,6 @@ a:hover {
 </head>
 <body style="margin: 0px;" bgcolor="#070707" text="#ADFF2E">
 
-
 <script type="text/javascript">
 var wimg = 950;
 var himg = 1900;
@@ -67,7 +66,6 @@ var wpndata = {};
 function showsec(secid){
 	vsecsthid = ["assault_rifles", "shotguns", "sniper_rifles", "dmrs", "handguns", "carbines", "lmgs", "pdws"];
 	vsecsthid.forEach(function (item, index) {
-		// console.log(item, index);
 		var idtset = document.getElementById(item);
 		idtset.style.display = 'none';  
 		idtset.style.visibility = 'hidden';		
@@ -77,12 +75,10 @@ function showsec(secid){
 	idtsetb.style.visibility = 'visible';		
 }
 for (let [keyb, valueb] of Object.entries(SymWeapons)) {			
-	for (let [keyc, valuec] of Object.entries(valueb)) {
-		// console.log(contt, keyb, keyc, valueb);
+	for (let [keyc, valuec] of Object.entries(valueb)) {		
 		if (valueb[keyc].name) {
 			if(contt > 0) htmldata += " | ";
 			htmldata +=	`<a href="./index.html?weapon=`+keyc+`&sec=`+keyb+`">`+valueb[keyc].name.toUpperCase()+`</a>`;
-			// console.log(contt, keyb, keyc);
 			contt++;
 		}	wpndata[keyc] = valueb[keyc].name;
 	}
@@ -100,7 +96,6 @@ for (let [keyb, valueb] of Object.entries(SymWeapons)) {
 	htmldata = "";
 	conttb++;
 	contt = 0;
-	// conttb = 0;
 }	
 htmldatab = `<div class="masec">` + htmldatac + `</div>` + htmldatab + "<br>";
 
@@ -111,11 +106,10 @@ loadhtmlbblog = `
 `;
 }
 loadimg = loadimg || "";
-
 </script>
 
-<center><br>Welcome to Symthic Screenshot backup! 
-<br>BBLog for Chrome | BBLog for Firefox | <a href='https://www.bfautism.ga/index.php?page=bbl' target='_blank'>BBLog Info & Plugins</a> 
+<center><br>Welcome to Symthic Screenshot backup! Screenshots from [ <a href='http://symthic.com/' target='_blank'>Symthic</a> & <a href='https://sym.gg/' target='_blank'>Sym.gg</a>]
+<br><a href='https://addons.mozilla.org/en-US/firefox/addon/better-battlelog-fix-bblog/' target='_blank'>BBLog for Chrome</a>  | <a href='https://chrome.google.com/webstore/detail/better-battlelog-fixbblog/ncopbeadajoekpedjllcakdmbmgnfgph?hl=en' target='_blank'>BBLog for Firefox</a>  | <a href='https://www.bfautism.ga/index.php?page=bbl' target='_blank'>BBLog Info & Plugins</a> 
 <br><br>
  <form action="/index.html">
   <label for="fname">Weapon slug name:</label> <input type="text" id="weapon" name="weapon" value="" size="10"> <input type="submit" value="Submit"> 
