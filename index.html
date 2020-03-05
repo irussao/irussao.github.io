@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb">
+<head>
+<!-- <meta http-equiv="Cache-Control" content="max-age=604800" /> -->
+<meta charset="utf-8">
+<script src="./weaponsforsym.js"></script>
+<script type="text/javascript">
+var url_string = window.location.href;
+var url = new URL(url_string);
+var loadimg = url.searchParams.get("weapon");
+var bblog = url.searchParams.get("bblog");
+var loadsec = url.searchParams.get("sec");
+var wpn_name = loadimg;
+</script>
+<style>
+a {
+	text-decoration: none;
+}
+a:link,a:visited,a:active {   
+    color: #FFFFFF;
+}
+a:hover {
+	color: #efff1f;
+}
+.masec a {   
+    color: #E38204;
+}
+.masec a:hover,a:active {
+	color: #efff1f;
+}
+</style>
+<title>Symthic Screenshot Backup</title>
+</head>
+<body style="margin: 0px;" bgcolor="#070707" text="#ADFF2E">
+
+
+<script type="text/javascript">
+var wimg = 950;
+var himg = 1900;
+var shells = "";
+var catitems = ["shorty-12g", "usas-12", "uts-15", "dbv-12", "saiga-12k", "m1014", "hawk-12g", "870-mcs", "dao-12", "qbs-09", "spas-12"];  
+   if (catitems.indexOf(loadimg) < 0) {
+		wimg = 950;
+		himg = 1900;
+   } else {
+		wimg = 950;
+		himg = 393;
+		shells = '<br><br><img src="https://jnjsh7rkprx40kalmasbdq-on.drv.tw/sym/images/shells.png">';
+   }
+if (loadimg == "damage-hitbox") { wimg = 950; himg = 880; }
+var phandata = "";
+if (loadimg == "m82a3-mid")  loadimg = loadimg.replace("-mid", "");
+if (loadimg == "amr-2-mid")  loadimg = loadimg.replace("-mid", "-cqb");
+if (loadimg == "amr-2")  loadimg = loadimg.replace("-2", "-2-cqb");
+if (loadimg == "phantom") { wimg = 850; himg = 476; phandata = '<br><br><img src="https://jnjsh7rkprx40kalmasbdq-on.drv.tw/sym/images/phantom1-2.png">'; }
+if (loadimg == "usas-12-flir" || loadimg == "usas-12" || loadimg == "shorty-12g") { wimg = 950; himg = 135; }
+if (loadimg == "all") { wimg = 1010; himg = 8391; }
+if (loadimg == "shotguns") { wimg = 962; himg = 3337; } 
+
+var htmldata = "";
+var htmldatab = "";
+var htmldatac = "";
+var contt = 0;
+var conttb = 0;
+var wpndata = {};
+function showsec(secid){
+	vsecsthid = ["assault_rifles", "shotguns", "sniper_rifles", "dmrs", "handguns", "carbines", "lmgs", "pdws"];
+	vsecsthid.forEach(function (item, index) {
+		// console.log(item, index);
+		var idtset = document.getElementById(item);
+		idtset.style.display = 'none';  
+		idtset.style.visibility = 'hidden';		
+	});
+	var idtsetb = document.getElementById(secid);
+	idtsetb.style.display = 'block';
+	idtsetb.style.visibility = 'visible';		
+}
+for (let [keyb, valueb] of Object.entries(SymWeapons)) {			
+	for (let [keyc, valuec] of Object.entries(valueb)) {
+		// console.log(contt, keyb, keyc, valueb);
+		if (valueb[keyc].name) {
+			if(contt > 0) htmldata += " | ";
+			htmldata +=	`<a href="./index.html?weapon=`+keyc+`&sec=`+keyb+`">`+valueb[keyc].name.toUpperCase()+`</a>`;
+			// console.log(contt, keyb, keyc);
+			contt++;
+		}	wpndata[keyc] = valueb[keyc].name;
+	}
+	var wpnsection = keyb.replace("_", " ");
+	var spacett = "";
+	if(conttb > 0) spacett = " | ";
+	htmldatac += spacett+ ` <a href="#" OnClick="showsec('`+keyb+`');">` +wpnsection.toUpperCase()+`</a> `;
+	htmldatab += `
+	<div id="`+keyb+`" style="position:absolute;width:100%;visibility: hidden;">
+	<center>
+	`+htmldata+` 	
+	</center>
+	</div>
+	`;
+	htmldata = "";
+	conttb++;
+	contt = 0;
+	// conttb = 0;
+}	
+htmldatab = `<div class="masec">` + htmldatac + `</div>` + htmldatab + "<br>";
+var loadhtml = `<center><br><br>Welcome to BBLog plugins!<br><a href='https://www.bfautism.ga/index.php?page=bbl' target='_blank'>https://www.bfautism.ga/index.php?page=bbl</a>
+<br><br>
+ <form action="/index.html">
+  <label for="fname">Weapon slug name:</label> <input type="text" id="weapon" name="weapon" value="" size="10"> <input type="submit" value="Submit"> 
+  <input type="button" value="ALL WEAPONS" onclick="window.open('./index.html?weapon=all', '_self');"> <input type="button" value="Shotguns" onclick="window.open('./index.html?weapon=shotguns', '_self');">
+</form> 
+<div>
+`+htmldatab+`
+</div>
+</center>`;
+var loadhtmlbblog = "";
+if (loadimg != null && loadimg != "") {	
+loadhtmlbblog = `
+<center><img src="https://jnjsh7rkprx40kalmasbdq-on.drv.tw/sym/images/`+loadimg+`.png" width="`+wimg+`" height="`+himg+`" alt="">`+shells+phandata+`</center>
+`;
+}
+loadimg = loadimg || "";
+
+</script>
+
+<center><br>Welcome to Symthic Screenshot backup! 
+<br>BBLog for Chrome | BBLog for Firefox | <a href='https://www.bfautism.ga/index.php?page=bbl' target='_blank'>BBLog Info & Plugins</a> 
+<br><br>
+ <form action="/index.html">
+  <label for="fname">Weapon slug name:</label> <input type="text" id="weapon" name="weapon" value="" size="10"> <input type="submit" value="Submit"> 
+  <input type="button" value="ALL WEAPONS" onclick="window.open('./index.html?weapon=all', '_self');"> <input type="button" value="Shotguns" onclick="window.open('./index.html?weapon=shotguns', '_self');">
+</form> 
+<script>document.write(htmldatab);</script>
+</center>
+
+<center>
+<div id="weaponscont">
+<BR><BR><BR>
+
+</div>
+</center>
+
+<script>
+if (loadsec) showsec(loadsec);
+if (bblog == 1) { document.getElementById("weaponscont").innerHTML = loadhtmlbblog; } 
+else {
+	var showcheck = 0;	
+	if (loadimg == "shotguns" || loadimg == "all") { 
+		wpn_name = loadimg;
+		showcheck = 1;
+	} else {
+		if (wpndata[wpn_name]) {
+			wpn_name = wpndata[wpn_name];
+			showcheck = 1;
+		}	
+	}	
+	if (showcheck == 0) { 
+		document.getElementById("weaponscont").innerHTML = "<hr><h3>Weapon not found!</h3> "; 
+	}else {
+		document.getElementById("weaponscont").innerHTML = "<hr><h3>" + wpn_name + "</h3> " +loadhtmlbblog; 
+	}
+}
+</script>
+
+</body>
+</html>
