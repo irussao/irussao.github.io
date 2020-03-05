@@ -52,7 +52,7 @@ if (loadimg == "m82a3-cqb")  loadimg = loadimg.replace("-cqb", "");
 if (loadimg == "m82a3-mid")  loadimg = loadimg.replace("-mid", "");
 if (loadimg == "amr-2-mid")  loadimg = loadimg.replace("-mid", "-cqb");
 if (loadimg == "amr-2")  loadimg = loadimg.replace("-2", "-2-cqb");
-if (loadimg == "phantom") { wimg = 850; himg = 476; phandata = '<br><br><img src="https://jirussao.github.io/images/phantom1-2.png">'; }
+if (loadimg == "phantom") { wimg = 850; himg = 476; phandata = '<br><br><img src="https://irussao.github.io/images/phantom1-2.png">'; }
 if (loadimg == "usas-12-flir" || loadimg == "usas-12" || loadimg == "shorty-12g") { wimg = 950; himg = 135; }
 if (loadimg == "all") { wimg = 1010; himg = 8391; }
 if (loadimg == "shotguns") { wimg = 962; himg = 3337; } 
@@ -102,7 +102,9 @@ htmldatab = `<div class="masec">` + htmldatac + `</div>` + htmldatab + "<br>";
 var loadhtmlbblog = "";
 if (loadimg != null && loadimg != "") {	
 loadhtmlbblog = `
-<center><img src="https://irussao.github.io/images/`+loadimg+`.png" width="`+wimg+`" height="`+himg+`" alt="">`+shells+phandata+`</center>
+<center><img src="https://irussao.github.io/images/`+loadimg+`.png" width="`+wimg+`" height="`+himg+`" alt="">`+shells+phandata+`
+<br><img src="https://irussao.github.io/images/datainfo.png">
+</center>
 `;
 }
 loadimg = loadimg || "";
