@@ -146,7 +146,9 @@ else {
 		}	
 	}	
 	if (showcheck == 0) { 
-		document.getElementById("weaponscont").innerHTML = "<hr><h3>Weapon not found!</h3> "; 
+		var wpncinfo = "";
+		if (url.searchParams.get("weapon")) wpncinfo = "Weapon not found!";
+		document.getElementById("weaponscont").innerHTML = "<hr><h3>"+wpncinfo+"</h3> "; 
 	}else {
 		document.getElementById("weaponscont").innerHTML = "<hr><h3>" + wpn_name + "</h3> " +loadhtmlbblog; 
 	}
