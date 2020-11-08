@@ -682,22 +682,7 @@
           'jsurl': 'https:\/\/getbblog.com\/plugins\/user\/147544.js',
           'imgurl': 'https:\/\/getbblog.com\/plugins\/user\/147544.jpg'
         },
-        '138606': {
-          'info': {
-            'lastupdate': 1429979683,
-            'version': '1.0.1',
-            'games': 'BF3, BF4, BFH',
-            'count': 0,
-            'creator': 'dapil',
-            'feedback-topic': '[BF3\/BF4\/BFH][v1.0.1]Add Twitter Feed'
-          },
-          'id': 138605,
-          'name': 'Advanced Scoreboard',
-          'desc': 'This plugin replaces the default scoreboard adding advanced stats of all player, squad and vehicle list, and it is possible to join any player or squad and much more.',
-          'url': 'https:\/\/github.com\/irussao\/BBLogPlugins',
-          'jsurl': 'https:\/\/cdn.jsdelivr.net\/gh\/irussao\/BBLogPlugins\/adscoreboard.js',
-          'imgurl': 'https:\/\/getbblog.com\/plugins\/user\/138606.jpg'
-        },'138605': {
+        '138605': {
           'info': {
             'lastupdate': 1604707200,
             'version': '1.2',
@@ -705,6 +690,22 @@
             'count': 0,
             'creator': 'Cr1N & Russao',
             'feedback-topic': '[BF4][v1.2]Advanced Scoreboard'
+          },
+          'id': 138605,
+          'name': 'Advanced Scoreboard',
+          'desc': 'This plugin replaces the default scoreboard adding advanced stats of all player, squad and vehicle list, and it is possible to join any player or squad and much more.',
+          'url': 'https:\/\/github.com\/irussao\/BBLogPlugins',
+          'jsurl': 'https:\/\/cdn.jsdelivr.net\/gh\/irussao\/BBLogPlugins\/adscoreboard.js',
+          'imgurl': 'https:\/\/getbblog.com\/plugins\/user\/138606.jpg'
+        },
+		'138606': {
+          'info': {
+            'lastupdate': 1429979683,
+            'version': '1.0.1',
+            'games': 'BF3, BF4, BFH',
+            'count': 0,
+            'creator': 'dapil',
+            'feedback-topic': '[BF3\/BF4\/BFH][v1.0.1]Add Twitter Feed'
           },
           'id': 138606,
           'name': 'Add Twitter Feed',
