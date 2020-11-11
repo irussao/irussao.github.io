@@ -282,22 +282,6 @@
       },
       'hotfixActive': false,
       'plugins': {
-        '160260': {
-          'info': {
-            'lastupdate': 1507759789,
-            'version': '1.3',
-            'games': 'BF4',
-            'count': 0,
-            'creator': 'xfileFIN',
-            'feedback-topic': 'True Player Counts'
-          },
-          'id': 160260,
-          'name': 'True Player Counts',
-          'desc': 'True Player Counts - Shows the true player count on the server (Not the ones in queue\/cheating with the bots).',
-          'url': 'https:\/\/getbblog.com\/plugin\/160260\/True-Player-Counts',
-          'jsurl': 'https:\/\/getbblog.com\/plugins\/user\/160260.js',
-          'imgurl': 'https:\/\/getbblog.com\/plugins\/user\/160260.jpg'
-        },
         '126663': {
           'info': {
             'lastupdate': 1467045675,
@@ -825,6 +809,22 @@
           'url': 'https:\/\/getbblog.com\/plugin\/138664\/French-Spelling-Correction',
           'jsurl': 'https:\/\/getbblog.com\/plugins\/user\/138664.js',
           'imgurl': 'https:\/\/getbblog.com\/plugins\/user\/138664.jpg'
+        },
+        '160260': {
+          'info': {
+            'lastupdate': 1507759789,
+            'version': '1.3',
+            'games': 'BF4',
+            'count': 0,
+            'creator': 'xfileFIN',
+            'feedback-topic': 'True Player Counts'
+          },
+          'id': 160260,
+          'name': 'True Player Counts',
+          'desc': 'True Player Counts - Shows the true player count on the server (Not the ones in queue\/cheating with the bots).',
+          'url': 'https:\/\/getbblog.com\/plugin\/160260\/True-Player-Counts',
+          'jsurl': 'https:\/\/getbblog.com\/plugins\/user\/160260.js',
+          'imgurl': 'https:\/\/getbblog.com\/plugins\/user\/160260.jpg'
         }
       }
     })
