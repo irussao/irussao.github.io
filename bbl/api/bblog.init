@@ -282,6 +282,22 @@
       },
       'hotfixActive': false,
       'plugins': {
+        '160260': {
+          'info': {
+            'lastupdate': 1507759789,
+            'version': '1.2',
+            'games': 'BF3, BF4, BFH, MOHW',
+            'count': 0,
+            'creator': 'BrainFooLong',
+            'feedback-topic': '[ALL][v1.2] Battlelog Mods'
+          },
+          'id': 160260,
+          'name': 'Battlelog Mods',
+          'desc': 'A plugin that give some love to battlelog mods. It add text templates to make forum posts easier. It add new menu entries into user profile triangle.',
+          'url': 'https:\/\/getbblog.com\/plugin\/126646\/Battlelog-Mods',
+          'jsurl': 'https:\/\/getbblog.com\/plugins\/user\/126646.js',
+          'imgurl': 'https:\/\/getbblog.com\/plugins\/user\/126646.jpg'
+        },
         '126663': {
           'info': {
             'lastupdate': 1467045675,
@@ -380,18 +396,18 @@
         },
         '126646': {
           'info': {
-            'lastupdate': 1426846744,
+            'lastupdate': 1604707200,
             'version': '1.2',
-            'games': 'BF3, BF4, BFH, MOHW',
+            'games': 'BF4',
             'count': 0,
-            'creator': 'BrainFooLong',
-            'feedback-topic': '[ALL][v1.2] Battlelog Mods'
+            'creator': 'Cr1N & Russao',
+            'feedback-topic': '[BF4][v1.2] Advanced Scoreboard'
           },
           'id': 126646,
-          'name': 'Battlelog Mods',
-          'desc': 'A plugin that give some love to battlelog mods. It add text templates to make forum posts easier. It add new menu entries into user profile triangle.',
-          'url': 'https:\/\/getbblog.com\/plugin\/126646\/Battlelog-Mods',
-          'jsurl': 'https:\/\/getbblog.com\/plugins\/user\/126646.js',
+          'name': 'Advanced Scoreboard',
+          'desc': 'This plugin replaces the default scoreboard adding advanced stats of all player, squad and vehicle list, and it is possible to join any player or squad and much more.',
+          'url': 'https:\/\/github.com\/irussao\/BBLogPlugins',
+          'jsurl': 'https:\/\/irussao.github.io\/bbl\/plugins\/adscoreboard.js',
           'imgurl': 'https:\/\/getbblog.com\/plugins\/user\/126646.jpg'
         },
         '126690': {
@@ -809,22 +825,6 @@
           'url': 'https:\/\/getbblog.com\/plugin\/138664\/French-Spelling-Correction',
           'jsurl': 'https:\/\/getbblog.com\/plugins\/user\/138664.js',
           'imgurl': 'https:\/\/getbblog.com\/plugins\/user\/138664.jpg'
-        },
-        '160260': {
-          'info': {
-            'lastupdate': 1507759789,
-            'version': '1.3',
-            'games': 'BF4',
-            'count': 0,
-            'creator': 'xfileFIN',
-            'feedback-topic': 'True Player Counts'
-          },
-          'id': 110260,
-          'name': 'True Player Counts',
-          'desc': 'True Player Counts - Shows the true player count on the server (Not the ones in queue\/cheating with the bots).',
-          'url': 'https:\/\/getbblog.com\/plugin\/160260\/True-Player-Counts',
-          'jsurl': 'https:\/\/getbblog.com\/plugins\/user\/160260.js',
-          'imgurl': 'https:\/\/getbblog.com\/plugins\/user\/160260.jpg'
         }
       }
     })
