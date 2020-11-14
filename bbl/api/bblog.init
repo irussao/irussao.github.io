@@ -819,7 +819,7 @@
             'creator': 'xfileFIN',
             'feedback-topic': 'True Player Counts'
           },
-          'id': 160260,
+          'id': 110260,
           'name': 'True Player Counts',
           'desc': 'True Player Counts - Shows the true player count on the server (Not the ones in queue\/cheating with the bots).',
           'url': 'https:\/\/getbblog.com\/plugin\/160260\/True-Player-Counts',
